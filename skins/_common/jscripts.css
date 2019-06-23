@@ -1,0 +1,102 @@
+/*
+   JavaScript related CSS, eg: jquery tools, slimbox, autocomplete, etc
+   Mostly from default css styling
+*/
+
+/* COLORBOX */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:5px; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+#cboxOverlay{background:rgba(0,0,0,0.4)}
+#colorbox{outline:0;border: 1px solid #999999;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 6px;-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);background-clip: padding-box;margin:20px 0}
+#cboxContent{background:#fff; overflow:hidden;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{margin-bottom:28px;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+#cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+#cboxLoadingOverlay{background:#fff}
+#cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+#cboxPrevious{position:absolute; bottom:0; left:0; background:url(images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious:hover{background-position:-75px -25px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext:hover{background-position:-50px -25px;}
+#cboxClose{position:absolute; bottom:0; right:0; background:url(images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxClose:hover{background-position:-25px -25px;}
+.cboxIE #cboxTopLeft,.cboxIE #cboxTopCenter,.cboxIE #cboxTopRight,.cboxIE #cboxBottomLeft,.cboxIE #cboxBottomCenter,.cboxIE #cboxBottomRight,.cboxIE #cboxMiddleLeft,.cboxIE #cboxMiddleRight { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); }
+
+/* AUTO COMPLETE */
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected {background:#39f;color:#fff}
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+/* GRITTER */
+#gritter-notice-wrapper{position:fixed;top:20px;right:20px;width:301px;z-index:9999;}
+#gritter-notice-wrapper.top-left{left:20px;right:auto;}
+#gritter-notice-wrapper.bottom-right{top:auto;left:auto;bottom:20px;right:20px;}
+#gritter-notice-wrapper.bottom-left{top:auto;right:auto;bottom:20px;left:20px;}
+.gritter-item-wrapper{position:relative;margin:0 0 10px;}
+.gritter-top{background:url(images/gritter.png) no-repeat left -30px;height:10px;}
+.hover .gritter-top{background-position:right -30px;}
+.gritter-bottom{background:url(images/gritter.png) no-repeat left bottom;height:8px;margin:0;}
+.hover .gritter-bottom{background-position:bottom right;}
+.gritter-item{display:block;background:url(images/gritter.png) no-repeat left -40px;color:#eee;font-size:11px;font-family:verdana;padding:2px 11px 8px;}
+.hover .gritter-item{background-position:right -40px;}
+.gritter-item p{word-wrap:break-word;margin:0;padding:0;color:#eee}
+.gritter-close{display:none;position:absolute;top:5px;left:3px;background:url(images/gritter.png) no-repeat left top;cursor:pointer;width:30px;height:30px;}
+.gritter-title{font-size:14px;font-weight:700;display:block;text-shadow:1px 1px 0 #000;padding:0 0 7px;color:#eee}
+.gritter-without-image{padding:0;}
+
+/* Tokenizing Autocomplete Text Entry v1.6.0 */
+ul.token-input-list{overflow:hidden;height:auto!important;height:1%;width:400px;border:1px solid #ccc;cursor:text;font-size:12px;font-family:Verdana;min-height:50px;z-index:999;margin:0;padding:0;background-color:#fff;list-style-type:none;clear:left;}
+ul.token-input-list li input{border:0;width:100px;padding:3px 8px;background-color:#FFF;margin:2px 0;-webkit-appearance:caret;}
+li.token-input-token{overflow:hidden;height:auto!important;height:15px;margin:3px;padding:1px 3px;background-color:#eff2f7;color:#000;cursor:default;border:1px solid #ccd5e4;font-size:11px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;float:left;white-space:nowrap;}
+li.token-input-token p{display:inline;padding:0;margin:0;}
+li.token-input-token span{color:#a6b3cf;margin-left:5px;font-weight:700;cursor:pointer;}
+li.token-input-selected-token{background-color:#5670a6;border:1px solid #3b5998;color:#fff;}
+li.token-input-input-token{float:left;margin:0;padding:0;list-style-type:none;}
+div.token-input-dropdown{position:absolute;width:400px;background-color:#fff;overflow:hidden;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;cursor:default;font-size:11px;font-family:Verdana;z-index:1;}
+div.token-input-dropdown p{margin:0;padding:5px;font-weight:700;color:#777;}
+div.token-input-dropdown ul{margin:0;padding:0;}
+div.token-input-dropdown ul li{background-color:#fff;padding:3px;margin:0;list-style-type:none;}
+div.token-input-dropdown ul li.token-input-dropdown-item{background-color:#fff;}
+div.token-input-dropdown ul li.token-input-dropdown-item2{background-color:#fff;}
+div.token-input-dropdown ul li em{font-weight:700;font-style:normal;}
+div.token-input-dropdown ul li.token-input-selected-dropdown-item{background-color:#3b5998;color:#fff;}
+
+/* bootstrap-datepicker.js */
+.calendar{cursor:pointer}
+.datepicker{top:0;left:0;margin-top:1px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding:4px;}
+.datepicker:before{content:'';display:inline-block;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #ccc;border-bottom-color:rgba(0,0,0,0.2);position:absolute;top:-7px;left:6px;}
+.datepicker:after{content:'';display:inline-block;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #fff;position:absolute;top:-6px;left:7px;}
+.datepicker > div{display:none;}
+.datepicker table{width:100%;margin:0;}
+.datepicker td,.datepicker th{text-align:center;width:20px;height:20px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.datepicker td.day:hover{background:#eee;cursor:pointer;}
+.datepicker td.day.disabled{color:#eee;}
+.datepicker td span{display:block;width:47px;height:54px;line-height:54px;float:left;cursor:pointer;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;margin:2px;}
+.datepicker th.switch{width:145px;}
+.datepicker th.next,.datepicker th.prev{font-size:21px;}
+.datepicker thead tr:first-child th{cursor:pointer;}
+.input-append.date .add-on i,.input-prepend.date .add-on i{display:block;cursor:pointer;width:16px;height:16px;}
+.datepicker td.old,.datepicker td.new,.datepicker td span.old{color:#999;}
+.datepicker td.active,.datepicker td.active:hover,.datepicker td span.active{background-image:linear-gradient(tobottom,#0088cc,#0044cc);background-repeat:repeat-x;background-color:#04c;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);}
+.datepicker td.active:hover,.datepicker td.active:hover:hover,.datepicker td.active:focus,.datepicker td.active:hover:focus,.datepicker td.active:active,.datepicker td.active:hover:active,.datepicker td.active.active,.datepicker td.active:hover.active,.datepicker td.active.disabled,.datepicker td.active:hover.disabled,.datepicker td.active[disabled],.datepicker td.active:hover[disabled],.datepicker td span.active:hover,.datepicker td span.active:focus,.datepicker td span.active:active,.datepicker td span.active.active,.datepicker td span.active.disabled,.datepicker td span.active[disabled]{color:#fff;background-color:#003bb3;}
+.datepicker td.active:active,.datepicker td.active:hover:active,.datepicker td.active.active,.datepicker td.active:hover.active,.datepicker td span.active:active,.datepicker td span.active.active{background-color:#039 \9;}
+.datepicker td span:hover,.datepicker thead tr:first-child th:hover{background:#eee;}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<qmodule type="module" version="1.0.0">
+	<name>Module Demo</name>
+	<type>general</type>
+	<typeRemark>The type field can be: general/payment/shipping</typeRemark>
+	<id>demo</id>
+	<author>C97.net</author>
+	<copyright>C97.net. All rights reserved.</copyright>
+	<license>Freeware</license>
+	<authorEmail>contact@c97.net</authorEmail>
+	<authorUrl>www.c97.net</authorUrl>
+	<version>1.0.0</version>
+	<description>This is a demo. Not a real module! Learn how to create a module for qEngine by installing this module.</description>
+
+	<install>
+		<query>
+			# enter your sql queries (such as CREATE TABLE.... etc)
+			# DO NOT FORGET TO USE __PREFIX__ to add table prefix
+			# __PREFIX__ only available in install &amp; uninstall module
+
+			# You can also create files &amp; folders (see below). Files &amp; folders are related to /admin/ folder!
+
+			# you can overwrite this standard installation (may be you need to do more complex installation)
+			# simply create an install.php in /admin/module/_YOUR_MODULE_/install.php
+			# qE2 will then use your install.php
+
+			CREATE TABLE IF NOT EXISTS `__PREFIX__demo` (
+			`idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
+			`ddate` date NOT NULL DEFAULT '0000-00-00',
+			`dname` varchar(255) NOT NULL,
+			`daddress` varchar(255) NOT NULL,
+			`dsex` char(1) NOT NULL,
+			`dnotes` text NOT NULL,
+			PRIMARY KEY (`idx`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+		</query>
+		<folder>demo</folder>
+		<file>demo/index.html</file>
+	</install>
+
+	<include>
+		<remark>include some css &amp; js files if necessary. the files are relative to /skins/_module folder, so "module.css" will open "/skins/_module/module.css"</remark>
+		<css>slideshow.css</css>
+		<css>slideshow2.css</css>
+		<js>js1.js</js>
+		<js>js2.js</js>
+	</include>
+
+	<uninstall>
+		<query>
+			# enter your sql queries (such as DROP TABLE.... etc)
+
+			# You need to remove files &amp; folders (files first, then folders)
+			# Folder will be made relative to admin/ folder
+
+			# you can overwrite this standard uninstallation (may be you need to do more complex uninstallation)
+			# simply create an uninstall.php in /admin/module/_YOUR_MODULE_/uninstall.php
+			# qE2 will then use your uninstall.php
+
+			DROP TABLE `__PREFIX__demo`;
+		</query>
+		<file>demo/index.html</file>
+		<folder>demo</folder>
+
+	</uninstall>
+
+	<config>
+		<remark>
+			This part will be inserted in database during install (table: dbprefix_module_config).
+			And will be read during module execution. Removed during uninstall.
+			If you enter any values here, don't forget to add module configuration function.
+			See configure.php.
+			THIS IS OPTIONAL!
+		</remark>
+		<configId>example</configId>
+		<configValue>123</configValue>
+	</config>
+
+	<adminMenu>
+		<remark>
+			adminTitle = Enter module administration title (such as: Add News, Manage News, Add Category, Add Gallery, etc)
+			adminUrl = Enter module administration URL (for example, if your file is edit.php, use: task.php?mod=demo&amp;amp;run=edit.php)
+			NOTICE!
+			task.php?mod=demo&amp;amp;run=edit.php (NOTICE the &amp;amp; WHY? Just do it!)
+			THIS IS OPTIONAL!
+		</remark>
+		<adminTitle>Manage Data</adminTitle>
+		<adminUrl>task.php?mod=demo&amp;amp;run=edit.php</adminUrl>
+	</adminMenu>
+
+	<language>
+		<remark>qEngine 7.0 supports multilingual feature, that allow users to display the web site in different languages. English (en) is required!</remark>
+		<id>en</id>
+		<lang_key>l_enter_address</lang_key>
+		<lang_value>Enter Address</lang_value>
+		<lang_key>l_enter_sex</lang_key>
+		<lang_value>Enter Sex</lang_value>
+		<lang_key>l_enter_notes</lang_key>
+		<lang_value>Enter Notes</lang_value>
+	</language>
+
+	<language>
+		<remark>This is the next language set.</remark>
+		<id>id</id>
+		<lang_key>l_enter_address</lang_key>
+		<lang_value>Masukan alamat</lang_value>
+		<lang_key>l_enter_sex</lang_key>
+		<lang_value>Jenis kelamin</lang_value>
+		<lang_key>l_enter_notes</lang_key>
+		<lang_value>Catatan</lang_value>
+	</language>
+</qmodule>

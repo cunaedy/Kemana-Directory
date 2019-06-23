@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qmodule type="module" version="2.0.0">
+	<name>Simple Stats</name>
+	<id>qstats</id>
+	<author>C97.net</author>
+	<copyright>C97.net. All rights reserved.</copyright>
+	<license>Freeware</license>
+	<authorEmail>contact@c97.net</authorEmail>
+	<authorUrl>www.c97.net</authorUrl>
+	<version>1.0.0</version>
+	<description>This module replaces qEngine\'s old simple statistics of visitors\' hits &amp; visits.</description>
+
+	<install>
+		<query>
+			CREATE TABLE `__PREFIX__stats_daily` (
+			  `stats_date` date NOT NULL,
+			  `stats_hit` int(10) unsigned NOT NULL,
+			  `stats_visit` int(10) unsigned NOT NULL,
+			  PRIMARY KEY (`stats_date`),
+			  KEY `stats_hit` (`stats_hit`),
+			  KEY `stats_visit` (`stats_visit`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+			
+			CREATE TABLE `__PREFIX__stats_ip` (
+			  `ip_address` varchar(15) NOT NULL,
+			  `last_update` int(10) unsigned NOT NULL,
+			  PRIMARY KEY (`ip_address`),
+			  KEY `last_update` (`last_update`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+		</query>
+	</install>
+	
+	<uninstall>
+		<query>
+			DROP TABLE `__PREFIX__stats_daily`;
+			DROP TABLE `__PREFIX__stats_ip`;
+		</query>
+	</uninstall>
+	
+ 	<config>
+		<configId>stats_last_update</configId>
+		<configValue>2013-01-01</configValue>
+	</config>
+ 
+	<adminMenu>
+		<adminTitle>Site Statistics</adminTitle>
+		<adminUrl>task.php?mod=qstats&amp;amp;run=stats.php</adminUrl>
+	</adminMenu>
+</qmodule>

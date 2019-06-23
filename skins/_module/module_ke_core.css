@@ -1,0 +1,4 @@
+/* by default KEMANA CORE uses /skins/default/style.css (or any other css) with same classes, so you can have consistent results */
+.ke_list_list{margin-bottom:5px}
+.ke_list_list_img{float:left;width:25%}
+.ke_list_list_txt{float:right;width:70%}

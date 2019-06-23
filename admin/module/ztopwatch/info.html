@@ -1,0 +1,46 @@
+<a name="top"></a>
+<h1>Documentation of Ztopwatch</h1>
+
+<h2>Introduction</h2>
+<p>This module replace the old stopwatch in qEngine v1.x, you know the "This page is generated in 0.10 second | 7 queries".<br />
+Because of the qEngine's processing procedure, using old stopwatch doesn't calculate the time needed to build modules.<br />
+So we build a new stopwatch (ztopwatch) to also calculate time needed
+to build modules. This should give more accurate information.<br />
+You should put this module as the last module on the page, ie. the bottom of the page.</p>
+
+<h2>Installing</h2>
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Click on Scan New Module.</li>
+ <li>On 'Available Modules', click 'Documentation' to read this manual.</li>
+ <li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>You may also need to change your template, see Usage section.</p>
+
+<h2>Usage</h2>
+<ul>
+  <li>Open a skin file, preferred outline.tpl, eg. skins/default/outline.tpl</li>
+  <li>At the bottom of the page, add:</li>
+  <li><div class="code"><b>Code:</b><br />
+  &lt;!-- BEGINMODULE ztopwatch --&gt;&lt;!-- ENDMODULE --&gt;</div></li>
+</ul>
+
+<h2>Modification</h2>
+<p>To modify the text, formatting, etc, see /module/ztopwatch/window.php</p>
+
+<h2>Uninstalling</h2>
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Find Ztopwatch. Click Uninstall.</li>
+ <li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for 100% clean uninstall.</p>
+
+<h2>About This Module</h2>
+
+<p><b>Ztopwatch Module</b><br />
+This Module is created by C97.net. You can contact author at: <a href="mailto:contact@c97.net">contact@c97.net</a>,
+or visit the website in: <a href="www.c97.net">www.c97.net</a><br />
+© C97.net. All rights reserved.</p>

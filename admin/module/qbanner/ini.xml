@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<qmodule type="module" version="1.0.0">
+ <name>qBanner</name>
+ <id>qbanner</id>
+ <author>C97.net</author>
+ <copyright>C97.net. All rights reserved.</copyright>
+ <license>Commercial</license>
+ <authorEmail>contact@c97.net</authorEmail>
+ <authorUrl>www.c97.net</authorUrl>
+ <version>1.0.0</version>
+ <description>Use this module to upload &amp; display banners.</description>
+ <install>
+  <query>
+	INSERT INTO `__PREFIX__page_group` (`group_id`, `group_title`, `group_notes`, `all_cat_list`, `cat_list`, `page_cat`, `page_image`, `page_image_size`, `page_thumb`, `page_gallery`, `page_gallery_thumb`, `page_author`, `page_comment`, `page_date`, `hidden_private`) VALUES
+	('QBANR',	'qBanner',	'qBanner module storage',	'0',	'0',	'0',	'1',	0,	0,	'0',	0,	'0',	'0',	'0',	'1');
+  </query>
+ </install>
+ <uninstall>
+  <query>
+DELETE FROM __PREFIX__page_group WHERE group_id='QBANR';
+  </query>
+ </uninstall>
+ <adminMenu>
+  <adminTitle>Manage Banner</adminTitle>
+  <adminUrl>task.php?mod=qbanner&amp;amp;run=edit.php</adminUrl>
+ </adminMenu>
+</qmodule>

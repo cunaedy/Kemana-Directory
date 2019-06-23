@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qmodule type="module" version="2.0.0">
+ <name>Page Gallery</name>
+ <id>page_gallery</id>
+ <author>C97.net</author>
+ <copyright>C97.net. All rights reserved.</copyright>
+ <license>Commercial</license>
+ <authorEmail>contact@c97.net</authorEmail>
+ <authorUrl>www.c97.net</authorUrl>
+ <version>2.0.0</version>
+ <description>Display selected pages or categories or groups anywhere!</description>
+ <install>
+  <query></query>
+ </install>
+ <uninstall>
+  <query></query>
+ </uninstall>
+</qmodule>

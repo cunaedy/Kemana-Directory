@@ -1,0 +1,140 @@
+<a name="top"></a>
+<h1>Documentation of Kemana Core Module (KeCM)</h1>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#install">Installing</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#uninstall">Uninstalling</a></li>
+</ul>
+<a name="intro"></a>
+<h2>Introduction</h2>
+<p>This is a multipurpose module for Kemana Directory. This module contains support for featured items, most visited, best rated, and more.</p>
+<p>[ <a href="#top">back to top</a> ]</p>
+
+<a name="install"></a>
+<h2>Installing</h2>
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Click on Scan New Module.</li>
+<li>On 'Available Modules', click 'Documentation' to read this
+manual.</li>
+<li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>You may also need to change your template, see Usage section.</p>
+<p>[ <a href="#top">back to top</a> ]</p>
+
+<a name="usage"></a>
+<h2>Usage</h2>
+<p>This module is a multipurpose module for Kemana (KeCM). There are various features in this module to enrich the Kemana experience.</p>
+<p>You can use Module Manager or edit the template directly to add this module to your Kemana installation.</p>
+
+<p class="code">&lt;!-- BEGINMODULE ke_core --&gt;<br />
+mode = item_list<br />
+dir_id = dir_id<br />
+items = ( random | best | newest | see_also | cat_featured | dir_featured | site_featured | history | <i>list_of_item_id</i> )<br />
+limit = <i>number of products to display</i><br />
+random = ( true | false )<br />
+user_id = <i>user_id</i><br />
+item_status = ( P | E | T )<br />
+item_visibility = ( A | M | H )<br />
+display = ( grid | list | list_small )<br />
+csswrapper = css_class<br />
+div_id = div_id<br />
+csswrapper_grid = css_class<br />
+csswrapper_list = css_class<br />
+&lt;!-- ENDMODULE ce_core --&gt;</p>
+
+<p>Parameters:</p>
+<ul>
+	<li>mode: item_list only for now.</li>
+	<li>dir_id: directory short name, eg: gen, hom, aut, etc (optional).</li>
+	<li>items
+		<ul>
+			<li>random: display random items</li>
+			<li>best: display most visited items</li>
+			<li>newest: display newest items</li>
+			<li>see_also: display 'see also' items for a specific item (in detail screen)</li>
+			<li>cat_featured: display featured items for a specific category (in list screen)</li>
+			<li>dir_featured: display featured items for a specific directory (in welcome screen)</li>
+			<li>history: display history of user visited items</li>
+			<li>user_id: display items belong to a specific user_id, define the user_id in user_id parameter (see below)</li>
+			<li><i>list_of_item_id</i>, eg: 1,2,3,4,5: display specific items, separated with commas.</li>
+		</ul></li>
+	<li>limit: 10 = limit number of products to display (default 10).</li>
+	<li>random: set 'true' to display random items instead if 'item' in items not available (default false).</li>
+	<li>user_id: filter results by user_id, to be used with parameter: items = user_id</li>
+	<li>item_status: filter results by status, which are:
+		<ul>
+			<li>P: all published items (default)</li>
+			<li>E: all pending items</li>
+			<li>T: all items still require user confirmation</li>
+			<li>ALL: all items still require user confirmation</li>
+		</ul></li>
+	<li>item_visibility: filter results by item visibility, which are:
+		<ul>
+			<li>A: available to all members &amp; guests (default)</li>
+			<li>M: available to members only</li>
+			<li>H: hidden items</li>
+			<li>ALL: all</li>
+		</ul>
+	<li>display
+		<ul>
+			<li>grid: display in grid style (default)</li>
+			<li>list: display in list style</li>
+			<li>list_small: display in vertical list with small thumbnail</li>
+		</ul></li>
+	<li>csswrapper: your own custom css for output wrapping (optional).</li>
+	<li>div_id: name of the container id (optional). If set, ke_core module will display a shortcut to change display mode (grid or list) which is clickable by visitors.</li>
+	<li>csswrapper_grid &amp; csswrapper_list: only required if you set div_id. CSS class for respective display mode.</li>
+</ul>
+
+<p>Examples:</p>
+<p>Displaying most visited items from General Directory:</p>
+<p class="code">&lt;!-- BEGINMODULE ke_core --&gt;<br />
+mode = item_list<br />
+dir_id = gen<br />
+items = best<br />
+display = grid<br />
+&lt;!-- ENDMODULE --&gt;</p>
+<hr />
+<p>Displaying specific items from all directory:</p>
+<p class="code">&lt;!-- BEGINMODULE ce_core --&gt;<br />
+mode = item_list<br />
+items = 1,2,3,4,5<br />
+display = list<br />
+&lt;!-- ENDMODULE --&gt;</p>
+<hr />
+<p>Displaying pending items from all directory for a specific user_id:</p>
+<p class="code">&lt;!-- BEGINMODULE ce_core --&gt;<br />
+mode = item_list<br />
+items = user_id<br />
+user_id = admin<br />
+item_status = E<br />
+item_visibility = ALL<br />
+display = list<br />
+&lt;!-- ENDMODULE --&gt;</p>
+<hr />
+<p>Displaying random items with visitors clickable display mode:</p>
+<p class="code">&lt;div id="mydiv"&gt;
+&lt;!-- BEGINMODULE ce_core --&gt;<br />
+mode = item_list<br />
+items = random<br />
+display = list<br />
+div_id = mydiv<br />
+csswrapper_grid = col-sm-4 col-md-3<br />
+csswrapper_list = col-sm-12<br />
+&lt;!-- ENDMODULE --&gt;<br />
+&lt;/div&gt;</p>
+
+<a name="uninstall"></a>
+<h2>Uninstalling</h2>
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Find Page Gallery. Click Uninstall.</li>
+<li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for
+100% clean uninstall.</p>
+<p>[ <a href="#top">back to top</a> ]</p>

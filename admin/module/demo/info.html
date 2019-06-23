@@ -1,0 +1,79 @@
+<a name="top"></a>
+<h1>Documentation of Demo</h1>
+
+<h2>Introduction</h2>
+<p>Demo module is a good place to start learning how to create a module for qEngine.</p>
+<p>To use this module, please install it first, then you can learn from example.</p>
+<p>See also <b>/admin/module/demo/demo.zip</b> to understand the file structure of a module. And finally, please refere to
+<a href="http://www.c97.net/task.php?mod=portal&cmd=cat&cid=3">online documentation</a>.
+
+<h2>Installing</h2>
+<p>To create an installer for your module is quite simple, see <b>/admin/module/demo/ini.xml</b> for example. The .ini will be used
+by qEngine to create an automatic installer for you.</p>
+
+<p>But you can also create your own installer, please see <b>/admin/module/demo/_install.php</b> for example.<br />
+Note: You have to rename it to install.php in order to make it work.</p>
+<p>To install this this module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Click on Scan New Modules.</li>
+ <li>On 'Available Modules', click 'Documentation' to read this manual.</li>
+ <li>Click on 'Install' to begin install process.</li>
+</ol>
+
+<h2>Upgrading From Older Version</h2>
+<p>Upgrading usually done manually using an install.php file.</p>
+
+<h2>Configuring</h2>
+<p>For configuration, you have to create it manually. You can use qAdmin if you want to. While this demo module doesn't have any configuration
+example, you can refer to <b>qe_config.php</b> to see how it is made.</p>
+<p>Configurator file must be named <b>configure.php</b>, and placed in <b>/admin/module/yourmodule</b>, eg: please see /admin/module/demo/configure.php.</p>
+<p>Later you can access it in ACP &gt; Modules &gt; Install/Uninstall.</p>
+
+<h2>Usage</h2>
+<p>This module doesn't do anything actually.</p>
+<p>After installed, you can see that <b>Demo Module</b> is added to <b>Modules</b> drop down menu. Modules &gt; Module Demo &gt; Manage Data.
+Where you can input your sample data for demo. The demo is using <b>qAdmin</b> for data entry.</p>
+<p>There are two files required by qEngine to display your module.</p>
+<ol>
+	<li>See <b>/module/demo/window.php</b> for example how to create an <b>inline</b> module, ie. module content displayed in other page contents. For example
+	a random banner (qbanner), simple statistics (ztopwatch), etc.</li>
+	<li>See <b>/module/demo/main.php</b> for example how to create an <b>outline</b> module, ie. module content displayed exclusively. For example
+	qcomment, when you click "See more comments".</li>
+	<li>If your module doesn't have outline mode, you can ignore main.php file. But window.php is always required even if your module doesn't have
+	inline mode.</li>
+</ol>
+<p>To add inline mode to your site:</p>
+<ol>
+ <li>Open a skin file, for example: skins/default/outline.tpl (you can use any file)</li>
+ <li>At the place you wish to display the module, add:<br />
+     <span style="font:10pt Courier">&lt;!-- BEGINMODULE demo --&gt;<br />
+	 ; while in demo module, there is no option, this is how option should be entered in windowed mode
+	 option = value<br />
+	 &lt;!-- ENDMODULE --&gt;</span><br /></li>
+</ol>
+<p>To open outline mode of this demo, use this link: <a href="../task.php?mod=demo" target="_blank">task.php?mod=demo</a></p>
+
+<h2>Modification</h2>
+<p>If your module needs any skin files, please put them in <b>/skins/_common folder</b>, eg: skins/_common/module_demo_window.tpl.</p>
+<p>Later if you have multiple skins, you can create a special design for any skin by placing the same filename in your skin folder, eg:
+skins/myskin/module_demo_window.tpl</p>
+
+<h2>Uninstalling</h2>
+<p>To create an uninstaller for your module is quite simple, see <b>/admin/module/demo/ini.xml</b> for example. The .ini will be used
+by qEngine to create an automatic uninstaller for you. But you can also create your own uninstaller, please see /admin/module/demo/_uninstall.php
+for example. You have to rename it to uninstall.php in order to make it work.</p>
+
+<p>To uninstall this module, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Find Demo module. Click Uninstall.</li>
+ <li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for 100% clean uninstall.</p>
+
+<h2>About This Module</h2>
+<p><b>Demo Module</b><br />
+This module is created by C97.net. You can contact us at: <a href="mailto:contact@c97.net">contact@c97.net</a>,
+or visit the website in: <a href="http://www.c97.net">http://www.c97.net</a><br />
+&copy; C97.net</p>

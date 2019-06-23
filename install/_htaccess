@@ -1,0 +1,30 @@
+# The installer should generate this file for you. If it didn't, you need to manually configure this file. Don't worry, it's easy!
+# 1. Match { $path} to your installation folder on line #14 & #30
+#    e.g
+#    if you installed qE in http://www.myweb.tld/ (root folder)
+#    use /
+#
+#    if you installed qE in http://www.myweb.tld/mysite/
+#    use /mysite/
+# 2. Rename this file to .htaccess
+# 3. Copy/move this file to qE installation location. Done.
+# Your server must be Apache and enable mod_rewrite.
+
+RewriteEngine On
+RewriteBase {$path}
+
+# Redirect www. to non www.
+# If your site URL is example.com, then you can redirect visitors from www.example.com to example.com
+# RewriteCond %{HTTP_HOST} ^www.yourdomain.com [NC]
+# RewriteRule ^(.*)$ http://yourdomain.com/$1 [L,R=301]
+
+# Redirect non www. to www.
+# If your site URL is www.example.com, then you can redirect visitors from example.com to www.example.com
+# RewriteCond %{HTTP_HOST} !^www.domain.com [NC] 
+# RewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301] 
+
+RewriteCond %{ENV:REDIRECT_STATUS} !^401$
+RewriteCond %{REQUEST_FILENAME} !\.(gif|jpe?g|png|js|css|swf|ico)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . {$path}permalink.php?permalink_request=%{HTTP_HOST}%{REQUEST_URI}&%{QUERY_STRING} [L]

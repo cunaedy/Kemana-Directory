@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qmodule type="module" version="2.0.0">
+	<name>Slideshow</name>
+	<id>slideshow</id>
+	<author>C97.net</author>
+	<copyright>C97.net. All rights reserved.</copyright>
+	<license>Freeware</license>
+	<authorEmail>contact@c97.net</authorEmail>
+	<authorUrl>www.c97.net</authorUrl>
+	<version>1.0.0</version>
+	<description>This module to replace qEngine\'s old featured contents.</description>
+
+	<install>
+		<query>
+			INSERT INTO `__PREFIX__page_group` (`group_id`, `group_title`, `group_notes`, `all_cat_list`, `cat_list`, `page_cat`, `page_image`, `page_image_size`, `page_thumb`, `page_gallery`, `page_gallery_thumb`, `page_author`, `page_comment`, `page_date`, `hidden_private`) VALUES
+			('SSHOW',	'Slideshow',	'Slideshow module storage',	'0',	'0',	'0',	'1',	0,	0,	'0',	0,	'0',	'0',	'0',	'1');
+		</query>
+	</install>
+	
+	<include>
+		<css>slideshow.css</css>
+	</include>
+
+	<uninstall>
+		<query>
+			DELETE FROM __PREFIX__page_group WHERE group_id='SSHOW';
+		</query>
+	</uninstall>
+
+	<adminMenu>
+		<adminTitle>Manage Slides</adminTitle>
+		<adminUrl>task.php?mod=slideshow&amp;amp;run=edit.php</adminUrl>
+	</adminMenu>
+</qmodule>

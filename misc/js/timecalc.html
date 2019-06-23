@@ -1,0 +1,309 @@
+<html>
+<head>
+	<title>JavaScript International Time Calculator</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../../skins/_common/default.css" />
+	<link rel="stylesheet" type="text/css" href="../../skins/_common/jscripts.css"/>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jscripts.js"></script>
+	<style>
+	h4 span{font-weight:800}
+	#otherTimes{width:100%;height:100px;overflow:auto;}
+	#PlaceSelector{width:100%;}
+	</style>
+</head>
+<body style="margin:10px">
+	<h4>Local Time <span id="local0"></span> &bull; 24 Hour Display GMT(UCT) <span id="gmt0"></span></h4>
+	<table class="table table-condensed">
+		<tr>
+			<th width="40%">City / Nation</th>
+			<th width="15%">Current Time</th>
+			<th width="15%">Relative to Local</th>
+			<th width="15%">Relative to GMT</th>
+			<th width="15%">Daylight Savings?</th>
+		</tr>
+		<tr><td id="city1"></td><td id="time1"></td><td id="local1"></td><td id="gmt1"></td><td id="dst1"></td></tr>
+		<tr><td id="city2"></td><td id="time2"></td><td id="local2"></td><td id="gmt2"></td><td id="dst2"></td></tr>
+		<tr><td id="city3"></td><td id="time3"></td><td id="local3"></td><td id="gmt3"></td><td id="dst3"></td></tr>
+		<tr><td id="city4"></td><td id="time4"></td><td id="local4"></td><td id="gmt4"></td><td id="dst4"></td></tr>
+		<tr><td id="city5"></td><td id="time5"></td><td id="local5"></td><td id="gmt5"></td><td id="dst5"></td></tr>
+		<tr><td id="city6"></td><td id="time6"></td><td id="local6"></td><td id="gmt6"></td><td id="dst6"></td></tr>
+		<tr><td id="city7"></td><td id="time7"></td><td id="local7"></td><td id="gmt7"></td><td id="dst7"></td></tr>
+		<tr>
+			<td style="padding-top:20px" colspan="2">
+				<select name="PlaceSelector" id="PlaceSelector" onchange="qReply(this.value)" size="5">
+					<option value="4.30%0">Afghanistan</option>
+					<option value="-3%0">Argentina</option>
+					<option value="9.30%4">Australia - Adelaide</option>
+					<option value="10%0">Australia - Brisbane</option>
+					<option value="9.30%0">Australia - Darwin</option>
+					<option value="10%4">Australia - Melbourne</option>
+					<option value="8%0">Australia - Perth</option>
+					<option value="10%5">Australia - Tasmania</option>
+					<option value="-4%0">Bolivia</option>
+					<option value="-5%1">Brazil - Andes</option>
+					<option value="-3%1">Brazil - East</option>
+					<option value="-4%1">Brazil - West</option>
+					<option value="6.30%0">Burma (Myanmar)</option>
+					<option value="-7%2">Canada - Calgary</option>
+					<option value="-3.30%2">Canada - Newfoundland</option>
+					<option value="-4%2">Canada - Nova Scotia</option>
+					<option value="-5%2">Canada - Quebec</option>
+					<option value="-5%2">Canada - Toronto</option>
+					<option value="-8%2">Canada - Vancouver</option>
+					<option value="-6%2">Canada - Winnipeg</option>
+					<option value="8%1">China - Mainland</option>
+					<option value="8%0">China - Taiwan</option>
+					<option value="-5%0">Colombia</option>
+					<option value="-5%1">Cuba</option>
+					<option value="2%1">Egypt</option>
+					<option value="2%3">Finland</option>
+					<option value="1%3">France</option>
+					<option value="1%3">Germany</option>
+					<option value="0%0">Ghana</option>
+					<option value="2%3">Greece</option>
+					<option value="5.30%0">India</option>
+					<option value="8%0">Indonesia - Bali, Borneo</option>
+					<option value="9%0">Indonesia - Irian Jaya</option>
+					<option value="7%0">Indonesia - Sumatra, Java</option>
+					<option value="3.30%1">Iran</option>
+					<option value="3%0">Iraq</option>
+					<option value="2%1">Israel</option>
+					<option value="-5%1">Jamaica</option>
+					<option value="3%0">Kenya</option>
+					<option value="9%0">Korea (North &amp; South)</option>
+					<option value="8%0">Malaysia</option>
+					<option value="-6%1">Mexico City</option>
+					<option value="0%0">Morocco</option>
+					<option selected value="5.45%0">Nepal</option>
+					<option value="12%6">New Zealand</option>
+					<option value="5%0">Pakistan</option>
+					<option value="-5%0">Peru</option>
+					<option value="8%0">Philippines</option>
+					<option value="1%3">Poland</option>
+					<option value="11%7">Russia - Kamchatka</option>
+					<option value="3%7">Russia - Moscow</option>
+					<option value="9%7">Russia - Vladivostok</option>
+					<option value="8%0">Singapore</option>
+					<option value="2%0">South Africa</option>
+					<option value="1%3">Spain</option>
+					<option value="1%3">Sweden</option>
+					<option value="7%0">Thailand</option>
+					<option value="12%0">Tonga</option>
+					<option value="2%3">Turkey</option>
+					<option value="3%1">Ukraine</option>
+					<option value="5%0">Uzbekistan</option>
+					<option value="7%0">Vietnam</option>
+					<option value="-9%2">USA - Alaska</option>
+					<option value="-9%0">USA - Arizona</option>
+					<option value="-6%2">USA - Central</option>
+					<option value="-5%2">USA - Eastern</option>
+					<option value="-10%0">USA - Hawaii</option>
+					<option value="-5%0">USA - Indiana East</option>
+					<option value="-7%2">USA - Mountain</option>
+					<option value="-8%2">USA - Pacific</option>
+				</select>
+			</td>
+			<td colspan="3" style="padding-top:20px">
+				<div id="otherTimes">Other cities and countries...</div>
+			</td>
+
+		</tr>
+	</table>
+
+<script>
+/*------------------------------------------------------------
+	JavaScript International Time Calculator
+	Copyright 1996, 1997, 1998 Ian Fennell (redlodge@sn.apc.org) all rights reserved
+	Modified by C97.net
+--------------------------------------------------------------*/
+
+var TableLength = 0;
+var timerID = null;
+var timerRunning = false;
+var Local = new Date();
+var GMToffset = Local.getTimezoneOffset();
+dstZones = new Array ();
+qReport = new Array ();
+TableTimes = new Array();
+currentQuery = null;
+
+if (GMToffset < 0) GMToffset = Math.abs(GMToffset)
+	else GMToffset = GMToffset - (Math.abs(GMToffset) *2);
+
+function Into24hrs (time) {
+	if ( time > 1440)
+		{ time -= 1440}
+	else
+		{ if ( time <0) { time = 1440 + time } };
+	return time;
+} // --- Into24hrs
+
+function GMTnow (GMT) {
+	var time = new Date();
+	hrs = time.getHours();
+	mins = time.getMinutes();
+	GMT = (hrs*60 + mins) - GMToffset;
+	GMT = Into24hrs(GMT);
+	return GMT;
+}
+
+function formatRelative (time) {
+	var Report = null;
+	var Direction  = (time > 0) ? " ahead" : " behind";
+	time = Math.abs (time);
+	var Hours = Math.floor (time/60);
+	var Mins = (time - Hours * 60);
+	Report = Hours + "h ";
+	if (Mins != 0) {Report=Report+Mins + "m "};
+	Report = Report+ Direction;
+	if (time== 0) {Report="Same Time"};
+	return Report;
+};
+
+function formatTime (time) {
+	var fHours = Math.floor (time/60) ;
+	if (fHours <= 9) {fHours = "0" + fHours};
+	var fMins = time - (fHours * 60);
+	if (fMins <= 9) {fMins = "0" + fMins};
+	var fTime = fHours + ":" + fMins;
+	return fTime;
+};
+
+function CheckDST () {
+	var uNow = new Date();
+	var uYear = uNow.getYear();
+	var leap = ((uYear % 4 == 0 && uYear % 100 != 0) || uYear % 400 == 0 )? true : false;
+	MonthDays = new Array (0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
+	var TodayNum = MonthDays [uNow.getMonth()] + uNow.getDate();
+	if (leap && TodayNum > 59) {TodayNum += 1};
+//FirstSun8Feb, FirstSun15Mar, LastSunMar, FirstSunApr, LastSunSep, FirstSunOct, FirstSun15Oct,LastSunOct,
+	ChangeDays = new Array (43, 78, 85, 92, 274, 281, 295, 302);
+	var NumChangeDays = ChangeDays.length;
+	if (leap) { for (var idx = 0; idx <= 6; idx++) {ChangeDays [idx] += 1} };
+	DSTdays = new Array ();
+	LastJan1 = new Date("Jan 1, " + uYear);
+	DayJan1 = LastJan1.getDay ();
+	for (var idx2 = 0; idx2 < NumChangeDays; idx2++) {
+		DSTdays [idx2] = ( TodayNum >= ChangeDays [idx2] - DayJan1 ) ? true : false;
+		};
+	dstZones[0] = null;
+	dstZones[1] = null;
+	dstZones[2] =  ( DSTdays[3] && !DSTdays[7] ) ? true : false;//usa/canada
+	dstZones[3] =  ( DSTdays[2] && !DSTdays[7] ) ? true : false;//uk/europe
+	dstZones[4] =  ( DSTdays[7] || !DSTdays[2] ) ? true : false;//aus
+	dstZones[5] =  ( DSTdays[5] || !DSTdays[2] ) ? true : false;//aus-tasmania
+	dstZones[6] =  ( DSTdays[5] || !DSTdays[1] ) ? true : false;//nz
+	dstZones[7] =  ( DSTdays[2] && !DSTdays[4] ) ? true : false;//russia
+}
+
+function qReply (ZoneData) {
+	currentQuery = ZoneData;
+	qHandler (ZoneData);
+	$('#otherTimes').html(
+		"Current Time = " + formatTime ( qReport[0] ) + "<br />" +
+		"Relative to Local = "+ qReport[1] + "<br />" +
+		"Relative to GMT = "+ qReport[2] + "<br />" +
+		"Using Daylight Savings? = " + qReport[3]);
+}
+
+
+function qHandler(ZoneData) {
+	qReport[0] = ""; qReport[1] = ""; qReport[2] = ""; qReport[3] = "";
+
+	var qGMTparse = parseFloat(ZoneData);
+	var qGMToffset_hrs = parseInt(qGMTparse, 10) ;
+	var qGMToffset_min= parseInt ( Math.round((qGMTparse-qGMToffset_hrs) * 100), 10);
+	var qDSTperiod = ZoneData.charAt (ZoneData.length - 1);
+	var qGMTperiod = 1440/60;
+	if ( (qGMToffset_hrs > 12) || (qGMToffset_hrs <-11) ) {qReport[0] = "BAD DATA"; return};
+	if (qDSTperiod > dstZones.length) {qReport[3] = "BAD DATA"};
+
+	var relGMT = (qGMToffset_hrs * 60) + qGMToffset_min;
+	if (qDSTperiod>1 && dstZones [qDSTperiod]) {relGMT += 60; qReport[3] = "Yes (+1 hour)"} else {qReport[3] = "No"};
+	if (qDSTperiod == 0) {qReport[3] = "n/a"};
+	if (qDSTperiod == 1) {qReport[3] = "uncertain"};
+
+	var qPlaceTotMins = GMTnow (qPlaceTotMins);
+	qPlaceTotMins += relGMT;
+	qPlaceTotMins = Into24hrs (qPlaceTotMins);
+	qReport[0] = qPlaceTotMins;
+	qReport[2] = formatRelative (relGMT);
+	var relLoc = relGMT - GMToffset;
+	qReport[1] = formatRelative (relLoc);
+}
+
+function writeClocks () {
+	var GMT = GMTnow (GMT);
+	var fTime = formatTime ( Into24hrs (GMT + GMToffset) );
+	$('#local0').text(fTime);
+	var fTime = formatTime ( Into24hrs (GMT) );
+	$('#gmt0').text(fTime);
+	var TableClock = null;
+	for (var idx = 0; idx < TableLength; idx++) {
+		TableClock = null;
+		TableClock += (GMT+TableTimes[idx]);
+		$('#time'+(idx+1)).text(formatTime (Into24hrs (TableClock) ));
+		};
+	if (currentQuery != null) {qReply (currentQuery)};
+}
+
+function stopclocks (){
+        if(timerRunning)
+                clearTimeout(timerID);
+        timerRunning = false;
+}
+
+function showclocks () {
+	writeClocks();
+	timerID = setTimeout("showclocks()",1000);
+	timerRunning = true;
+}
+
+function startClocks () {
+	if (0) {
+		writeClocks();
+		alert ("Sorry, the 'real time' clocks have been disabled for Netscape4(communicator) as they crash the browser.\n\nReload to update the times.\n\nSoon to be fixed");
+	}
+	else {
+		stopclocks();
+		showclocks();
+	}
+}
+
+function writeTable () {
+	// max 7 cities, if you need more, please add more <td> in the table
+	cities = new Array (
+		"-5%2", "New York",
+		"10%4", "Sydney",
+		"2%4", "South Africa",
+		"1%3", "Germany",
+		"1%3", "Italy",
+		"0%3", "UK",
+		"9%1", "Japan");
+
+	for (var idx = 0; idx < cities.length; idx+=2)
+	{
+		TableLength += 1;
+		var qGMTparse = parseFloat(cities[idx]);
+		var qGMToffset_hrs = parseInt(qGMTparse, 10) ;
+		var qGMToffset_min= parseInt ( Math.round((qGMTparse-qGMToffset_hrs) * 100), 10);
+		var qDSTperiod = cities[idx].charAt (cities[idx].length - 1);
+		var relGMT = (qGMToffset_hrs * 60) + qGMToffset_min;
+		if (dstZones [qDSTperiod]) {relGMT += 60};
+		TableTimes[idx/2] = relGMT;
+		qHandler( cities[idx] );
+		$('#city'+TableLength).text(cities[idx+1]);
+		$('#local'+TableLength).text(qReport[1]);
+		$('#gmt'+TableLength).text(qReport[2]);
+		$('#dst'+TableLength).text(qReport[3]);
+	};
+}
+
+CheckDST();
+writeTable();
+startClocks();
+</script>
+</body>
+</html>

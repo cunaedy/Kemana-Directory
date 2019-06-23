@@ -1,0 +1,51 @@
+<a name="top"></a>
+<h1>Documentation of Payment Gateway: PayPal (IPN)</h1>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#install">Installing</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#uninstall">Uninstalling</a></li>
+</ul>
+<a name="intro"></a>
+<h2>Introduction</h2>
+<p>This module is a payment gateway for PayPal. You can use it for PayPal Standard and PayPal IPN (Instant Payment Notification.
+With IPN, once the payment is approved by PayPal, all digital products will be sent to buyers automatically. But, be sure
+to always recheck the payment!</p>
+<p>[ <a href="#top">back to top</a> ]</p>
+
+<a name="install"></a>
+<h2>Installing</h2>
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Click on Scan New Module.</li>
+<li>On 'Available Modules', click 'Documentation' to read this
+manual.</li>
+<li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>You may also need to change your template, see Usage section.</p>
+<p>[ <a href="#top">back to top</a> ]</p>
+
+<a name="usage"></a>
+<h2>Usage</h2>
+<p>This module is intended to be used with Cart Engine or other scripts that support C97's Payment Gateway Module.</p>
+<p>You can enable PayPal IPN in module configuration. When using PayPal IPN, once confirmed by PayPal, this module will do the following automatically:
+	<ul>
+		<li>Set payment status to Paid.</li>
+		<li>All digital products will be delivered to buyer.</li>
+		<li>An email will be sent to buyer to download the digital products.</li>
+		<li>Order containing digital products only will be set to Delivered.</li>
+		<li>If you do NOT want this to happen automatically, please disable IPN support.</li>
+	</ul></p>
+<p>[ <a href="#top">back to top</a> ]</p>
+
+<a name="uninstall"></a>
+<h2>Uninstalling</h2>
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Find PayPal. Click Uninstall.</li>
+<li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for 100% clean uninstall.</p>
+<p>[ <a href="#top">back to top</a> ]</p>

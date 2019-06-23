@@ -1,0 +1,127 @@
+Version 3.2.1 / 20190623:
+[QE] Use PHPFixer to reformat all php files to conform with PSR-2
+[KE] Released in GitHub
+
+Version 3.2 / 20170903:
+[KE] Bug fixes, thanks to Mario K�stner (notdienst24.help)
+[KE] English language tidied up by Peter Walker (rifeforum.com)
+[KE] Much better search, visitors can search anything (title, description, custom field) and provide more accurate results
+[KE] Category list in welcome now have clickable thumbs
+[KE] Replace circle rating with classic but trustworthy rating star
+[KE] Lock menu editing for directory related items
+[KE] Shortened description text in grid mode, you should use grid mode for image focussed listings
+[KE] Removed site wide features as it overlapped with directory features
+[KE] 'No Detail' mode, when clicked will open the target web site instead of detail page
+[KE] New custom field types: URL & Video (Youtube & Vimeo only)
+[KE] Ke_core module allows visitors to change view mode (requires DIV ID)
+[KE] Allow URL masking to hide real URL (useful for referral)
+[QE] As always, bug fixes
+[QE] Add more permissions
+[QE] Tidy up image library
+[QE] Drop Newsletter feature. You can use mailchimp or yahoogroups to manage newsletter.
+[QE] Drop country table, replaced with /includes/countrylist.php file.
+[QE] Admin can no longer login from front end. This will defeat the purpose of renaming the ACP.
+
+Version 3.1 / 20170531:
+[KE] Bug fixes
+[KE] Categories without thumbnail image will use directory thumbnail image
+
+Version 3.0 / 20170401:
+[QE] More bug fixes
+[QE] Update JS libraries to latest versions, except chart.js, as version 2.0 is way much bigger than current one
+[QE] Utilizing qadmin_log, you can now restore changed contents to older ones... Time Machine thingy
+[QE] Change qAdmin Section into tabs for much cleaner interface
+[QE] UI now has ACP short cuts when logged in as admin
+[QE] Replace Google RSS with internal script
+[QE] Removing IE8 supports. If you still need IE8 supports, please see https://code.google.com/archive/p/css3-mediaqueries-js/source/default/source
+[QE] Removing BB code supports, as it is obsolete by now. Long life simplicity
+[QE] Modify international clock
+[QE] Update installer UI
+[KE] Bug fixes
+[KE] Category Browser
+[KE] Backlinking
+[KE] Backlink autochecker
+[KE] Referral system, limited 1 IP 1 vote
+[KE] Sort point implementation
+[KE] Listing recount feature
+[KE] New custom fields: multi select, date, time, country.
+
+Version 2.0.1:
+[KE] Remove ionCube requirement, and re-release it as a completely free!
+
+Version 2.0.0:
+[KE] Uh...... too much to list the changes here. Kemana 2 is a complete rewrite from scratch of Kemana.
+[QE] Uses qEngine 12.1 (Kemana 2 edition)
+
+Version 1.5.6:
+[QE] Renamed /etc/ folder to /misc/ - some servers don't allow user access to /etc/ folder
+
+Version 1.5.5:
+[QE] Blank page after installation - http://www.c97.net/forum/index.php?topic=400.0
+[QE] PHP error when using the "�" Symbol - http://www.c97.net/forum/index.php?topic=433.0
+[QE] UTF-8 for email messages - http://www.c97.net/forum/index.php?topic=441.0
+[QE] Custom date & time words - http://www.c97.net/forum/index.php?topic=444.0
+[KE] Tell Friend & Report This Link don't work - http://www.c97.net/forum/index.php?topic=411.0
+[KE] No article/portal link in ACP - http://www.c97.net/forum/index.php?topic=427.0
+[KE] Custom field FILE/IMAGE removal problem - http://www.c97.net/forum/index.php?topic=438.0
+[KE] NEW! Payment gateway: Click-n-Stash (thanks bwc2)
+[KE] NEW! Payment gateway: NoChex
+
+Version 1.5:
+[QE] NEW! Upgrade to qEngine 4.0
+[QE] Minor fixes
+[QE] Replace guestbook with qComment
+[QE] New skin folder: _common, to simplify skin designing
+[QE] Replace prototype.js with jquery.js
+[QE] Page menu now can be placed in four positions
+[QE] Module now can be placed in eight positions
+[KE] Fix Other minor fixes
+[KE] NEW? Nothing new, simply want to upgrade to qE4.0. Wait for 1.6 for more new features!
+
+version 1.4:
+[KE] Fix Editor level
+[KE] Add visitor hits on list & detail
+[KE] Add URL checker
+[KE] Add configurable number of categories for "Browse this Site"
+[QE] Fix qCache
+[QE] Updated to v3.5.1
+
+version 1.3:
+[KE] Fix category cache
+[KE] Fix str_ireplace problem for PHP4
+[KE] Fix url problem in mobile view
+[KE] Fix comment link in ACP
+[KE] Fix endless redirection after approving a change
+[KE] Fix qcomment module -- disabling SEF URL for module for now
+[KE] Add more breadcrumb for multiple directory (btw, if you feel it's too long, either you can remove the breadcrumb, or buy a license)
+     -- or create your own JS to remove the "Powered by ..." from the body (not the HTML title) -- yes, it's allowed!
+[KE] Convert article management to module
+[QE] Updated to v3.5 -- many fixes, including anti-spam
+
+version 1.2:
+[KE] Fix category order
+[KE] Fix category separator
+[KE] Fix category structure
+[KE] Fix portal content
+[KE] Reorganize ACP menu
+[QE] Fix cache behaviour
+[QE] Add auto-recache for qadmin
+[QE] After sending email in ACP, return to correct page instead of previous page
+[QE] Captcha automatically revert back to GD1 if TTF not supported by GD2
+
+version 1.1.3:
+[KE] Minor fixes
+[KE] Fix installation under Windows
+
+version 1.1.2:
+[QE] Add select/deselect all for multi checkbox
+
+version 1.1.1:
+[QE] Update http-headers to enforce Firefox to accept correct charset
+
+Version 1.1:
+[KE] Rebuild engine, so it's now much faster than v1.0. In some sites, it's 6x faster.
+[KE] Small fixes
+
+Version 1.0:
+[KE] First release

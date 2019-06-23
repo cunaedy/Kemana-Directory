@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<qmodule type="module" version="1.0.0">
+	<name>PayPal</name>
+	<type>payment</type>
+	<id>pay_paypal</id>
+	<author>C97.net</author>
+	<copyright>C97.net. All rights reserved.</copyright>
+	<license>Commercial</license>
+	<authorEmail>contact@c97.net</authorEmail>
+	<authorUrl>www.c97.net</authorUrl>
+	<version>1.0.0</version>
+	<description>A payment gateway for PayPal (IPN). (Also contains information for developers)</description>
+	<install>
+		<query></query>
+	</install>
+	<uninstall>
+		<query></query>
+	</uninstall>
+	<config>
+		<configId>bussiness</configId>
+		<configValue>xxx@yyy.com</configValue>
+		<configId>currency_code</configId>
+		<configValue>USD</configValue>
+		<configId>sandbox</configId>
+		<configValue>0</configValue>
+		<configId>ipn</configId>
+		<configValue>1</configValue>
+		<configId>conversion_rate</configId>
+		<configValue></configValue>
+		<configId>direct_approval</configId>
+		<configValue>1</configValue>
+	</config>
+</qmodule>

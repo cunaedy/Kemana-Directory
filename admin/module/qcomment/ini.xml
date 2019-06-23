@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<qmodule type="module" version="1.0.0">
+ <name>qComment</name>
+ <id>qcomment</id>
+ <author>C97.net</author>
+ <copyright>C97.net. All rights reserved.</copyright>
+ <license>Commercial</license>
+ <authorEmail>contact@c97.net</authorEmail>
+ <authorUrl>www.c97.net</authorUrl>
+ <version>3.0.0</version>
+ <description>Add user comments &amp; user ratings to your site and your modules, easily!</description>
+
+ <install>
+  <query>
+	CREATE TABLE IF NOT EXISTS `__PREFIX__qcomment` (
+	  `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+	  `mod_id` varchar(255) NOT NULL DEFAULT '',
+	  `item_id` varchar(80) NOT NULL,
+	  `item_title` varchar(255) NOT NULL,
+	  `comment_user` varchar(255) NOT NULL DEFAULT '',
+	  `comment_title` varchar(255) NOT NULL DEFAULT '',
+	  `comment_body` text NOT NULL,
+	  `comment_date` date NOT NULL DEFAULT '0000-00-00',
+	  `comment_rate` tinyint(3) unsigned NOT NULL DEFAULT '0',
+	  `comment_helpful` varchar(16) NOT NULL,
+	  `comment_approve` char(1) NOT NULL DEFAULT '',
+	  PRIMARY KEY (`comment_id`),
+	  KEY `mod_id` (`mod_id`),
+	  KEY `item_id` (`item_id`)
+	) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+	CREATE TABLE IF NOT EXISTS `__PREFIX__qcomment_set` (
+	  `group_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+	  `comment_mode` char(1) NOT NULL,
+	  `comment_approval` char(1) NOT NULL,
+	  `member_only` char(1) NOT NULL,
+	  `unique_comment` char(1) NOT NULL,
+	  `comment_helpful` char(1) NOT NULL,
+	  `comment_on_comment` char(1) NOT NULL,
+	  `captcha` char(1) NOT NULL,
+	  `detail` char(1) NOT NULL,
+	  `mod_id` varchar(15) NOT NULL,
+	  `notes` varchar(255) NOT NULL,
+	  PRIMARY KEY (`group_id`)
+	) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+	INSERT INTO `__PREFIX__qcomment_set` (`group_id`, `comment_mode`, `comment_approval`, `member_only`, `unique_comment`, `comment_helpful`, `comment_on_comment`, `captcha`, `detail`, `mod_id`, `notes`) VALUES
+	(1,	'2',	'0',	'0',	'0',	'0',	'1',	'0',	'0',	'conc',	'Comments on comments'),
+	(3,	'2',	'1',	'0',	'0',	'0',	'1',	'0',	'1',	'pagecomment',	'Page Comment');
+  </query>
+ </install>
+
+ <uninstall>
+  <query>
+	DROP IF EXISTS TABLE `__PREFIX__qcomment`;
+	DROP IF EXISTS TABLE `__PREFIX__qcomment_set`;
+  </query>
+ </uninstall>
+
+ <adminMenu>
+  <adminTitle>Manage Comments</adminTitle>
+  <adminUrl>task.php?mod=qcomment&amp;amp;run=edit.php</adminUrl>
+ </adminMenu>
+ <adminMenu>
+  <adminTitle>Comment Rules</adminTitle>
+  <adminUrl>task.php?mod=qcomment&amp;amp;run=rule.php</adminUrl>
+ </adminMenu>
+</qmodule>

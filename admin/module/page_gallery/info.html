@@ -1,0 +1,117 @@
+<a name="top"></a>
+<h1>Documentation of Page Gallery</h1>
+
+<h2>Introduction</h2>
+Use this module to display your page (see Admin CP &gt; Contents &gt; Pages) in your site. For example, you may
+want to display a message in a specific area of your site, see welcome.tpl for a better example.
+You can display as many pages as you need.
+
+<h2>Installing</h2>
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Click on Scan New Module.</li>
+<li>On 'Available Modules', click 'Documentation' to read this
+manual.</li>
+<li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>You may also need to change your template, see Usage section.</p>
+
+<h2>Usage</h2>
+<ol>
+<li>Open a skin file</li>
+<li>Any where, add:</li>
+<li>
+<div class="code">&lt;!-- BEGINMODULE page_gallery --&gt;<br />
+<i>option = value</i><br />
+&lt;!-- ENDMODULE --&gt;<br />
+</div>
+</li>
+<li>Where option can be:
+	<ul>
+		<li>group_id = <i>id of page type you want to display, eg. 'news', or 'genpg'. See <a href="page_group.php?qadmin_cmd=list">Page Group Editor</a> for more ID.</i></li>
+		<li>cat_id = <i>id for a page category you want to display, eg. 1 for general category.  See <a href="page_cat.php?qadmin_cmd=list">Page Category Editor</a> for more ID.</i></li>
+		<li>page_id = <i>id for a page you want to display, eg. 1 for welcome page.  See <a href="page.php?qadmin_cmd=list">Page Editor</a> for more ID.</i></li>
+		<li>title = <i>1 | 0, use 1 ti display title, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>summary = <i>1 | 0, use 1 ti display summary, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>body = <i>1 | 0, use 1 to display body content, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>link = <i>1 | 0, use 1 to display link, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>image = <i>1 | 0, use 1 to display page main image, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>thumb = <i>1 | 0, use 1 to display page thumbnail image, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>date = <i>1 | 0, use 1 to display page creation date, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>time = <i>1 | 0, use 1 to display page creation time, 0 (or ignore it) to hide it. Optional.</i></li>
+		<li>limit = <i>limited displayed items, default is 10. Optional.</i></li>
+		<li>offset = <i>offset displayed items, default is 0. Optional.</i></li>
+		<li>orderby = <i>display page list ordered by this value: page_title, page_date, page_unix, page_rating, page_comment and/or page_hit. Optional.</i></li>
+		<li>sort = <i>display page list ordered by this method: ASC for ascending, and DESC for descending. Optional.</i></li>
+		<li>style = <i>default | list, default is default. Optional.</i></li>
+		<li>sectiontpl = <i>name of section to use as output template. Optional.</i></li>
+		<li>NOTES: Almost all parameters are optional, the only required parameter is either: group_id, cat_id, or page_id.</li>
+		<li>NOTES 1: group_id, cat_id &amp; page_id is mutually exclusive. Use only one, or none at all to display all contents.</li>
+		<li>NOTES 2: you can also assign multiple values for group_id, cat_id &amp; page_id by using comma, eg: 1,2,3.</li>
+		<li>NOTES 3: you can also assign multiple values for orderby, eg: page_title, page_date.</li>
+	</ul></li>
+</ol>
+<h2>Examples:</h2>
+<p>To display a welcome page:</p>
+<div class="code">&lt;!-- BEGINMODULE page_gallery --&gt;<br />
+page_id = 1<br />
+body = 1<br />
+&lt;!-- ENDMODULE --&gt;</div>
+
+<p>To display list of pages from NEWS page type:</p>
+<div class="code">&lt;!-- BEGINMODULE page_gallery --&gt;<br />
+group_id = news<br />
+title = 1<br />
+summary = 1<br />
+style = list<br />
+&lt;!-- ENDMODULE --&gt;</div>
+
+
+<p>To display list of latest entries from your BLOG page type (assuming your BLOG category id are: 5, 6, 7):</p>
+<div class="code">&lt;!-- BEGINMODULE page_gallery --&gt;<br />
+cat_id = 5, 6, 7<br />
+title = 1<br />
+summary = 1<br />
+date = 1<br />
+time = 1<br />
+link = 1<br />
+orderby = page_unix<br />
+sort = desc<br />
+&lt;!-- ENDMODULE --&gt;</div>
+
+<p>To use custom template to display output:</p>
+<div class="code">&lt;!-- BEGINMODULE page_gallery --&gt;<br />
+group_id = news<br />
+tplsection = mytpl<br />
+&lt;!-- ENDMODULE --&gt;<br />
+<br />
+&lt;!-- BEGINSECTION mytpl --&gt;<br />
+Define your template here<br />
+You can use any tags without enabling them in module<br />
+&#123;$page_title}<br />
+&#123;$page_summary}<br />
+&#123;$more}<br />
+<i>For more tags, please refer to the qe_page table structure.</i><br />
+&lt;!-- ENDSECTION --&gt;
+</div>
+
+<h2>Modification</h2>
+<p>To modify the text, formatting, etc, see
+/module/page_gallery/window.php</p>
+
+<h2>Uninstalling</h2>
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+<li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+<li>Find Page Gallery. Click Uninstall.</li>
+<li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for
+100% clean uninstall.</p>
+
+<h2>About This Module</h2>
+<p><b>Page Gallery Module</b><br />
+This Module is created by C97.net. You can contact author at: <a href="mailto:contact@c97.net">contact@c97.net</a>,
+or visit the website in: <a href="www.c97.net">www.c97.net</a><br />
+&copy; C97.net. All rights reserved.</p>

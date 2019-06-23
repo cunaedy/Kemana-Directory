@@ -1,0 +1,115 @@
+<a name="top"></a>
+<h1>Documentation of qComment</h1>
+
+<h2>Introduction</h2>
+<p>This module is allow users to add comments or rates to an article.<br />
+You can use qComment for anything you want to comment/rate, any modules, any pages, anything.<br />
+This module is unique, this module is not a stand alone, instead called from another module
+(for example qStory &amp; Micro Gallery use this module).<br />
+<b>NOTE:</b> Some modules may require this module to accept comments &amp; ratings.</p>
+
+<h2>Installing</h2>
+
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Click on Scan New Module.</li>
+ <li>On 'Available Modules', click 'Documentation' to read this manual.</li>
+ <li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>After installing, you have to configure it before you can start using it. See Configuring section for more
+information.</p>
+<p>You may also need to change your template, see Usage section.</p>
+<p><b>Please merge /admin/module/qcomment/style.css to your existing stylesheet file.</b></p>
+<p><b>You may need to modify some language vars. Open /module/qcomment/window.php &amp; main.php to see the vars, and make approriate changes.</b></p>
+
+
+<h2>Configuring</h2>
+
+<p>Before you can use this Module, you have to configure it first.</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Find qComment, and click Configure.</li>
+</ol>
+
+
+<h2>Usage</h2>
+<p>To display user rating (and form), simply use this:</p>
+<ul>
+ <li><div class="code"><b>Code:</b><br />
+ &lt;!-- BEGINMODULE qcomment --&gt;<br />
+ mode = rate<br />
+ mod_id = $module_id<br />
+ item_id = $item_id<br />
+ &lt;!-- ENDMODULE --&gt;</div></li>
+
+ <li>Parameters:<br />
+ $module_id = your module id<br />
+ $item_id = a unique id (story id, item id, image id, etc)</li>
+
+ <li>For example, to display rate box for module qStory (module id: qstory), story id 5, use:<br />
+ <div class="code"><b>Code:</b><br />
+ &lt;!-- BEGINMODULE qcomment --&gt;<br />
+ mode = rate<br />
+ mod_id = qstory<br />
+ item_id = 5<br />
+ &lt;!-- ENDMODULE --&gt;</div></li>
+ </ul>
+
+<p>To display user comment (and a link to form), simply use this:</p>
+<ul>
+ <li><div class="code"><b>Code:</b><br />
+ &lt;!-- BEGINMODULE qcomment --&gt;<br />
+ mode = comment<br />
+ mod_id = $module_id<br />
+ item_id = $item_id<br />
+ sort = $sort_mode<br />
+ title = $title<br />
+ items = $n<br />
+ &lt;!-- ENDMODULE --&gt;</div></li>
+
+ <li>Parameters:<br />
+ $module_id = your module id<br />
+ $item_id = a unique id (eg. story id, item id, image id, etc)<br />
+ $sort_mode = can be 'latest' or 'first' (default: latest)<br />
+ $title = item title (eg. my story, his story, etc, usually article title)<br />
+ $items = number of comment to display in window mode (default: 5)</li>
+
+ <li>For example, to display last 8 comments for module qStory (module id: qstory), story id 5, use:<br />
+ <div class="code"><b>Code:</b><br />
+ &lt;!-- BEGINMODULE qcomment --&gt;<br />
+ mode = comment<br />
+ mod_id = qstory<br />
+ item_id = 5<br />
+ sort = latest<br />
+ title = Some Title<br />
+ items = 8<br />
+ &lt;!-- ENDMODULE --&gt;</div></li>
+</ul>
+
+<h2>Modification</h2>
+<p>You can modify this module output, by editing:</p>
+<ul>
+ <li>skins/default/module_qcomment_window.tpl</li>
+ <li>and, skins/default/module_qcomment.tpl</li>
+</ul>
+If you have multiple skins, you can copy those files to your skin's folder. Otherwise, it will use default skin.
+
+<h2>Uninstalling</h2>
+
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Find qComment. Click Uninstall.</li>
+ <li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for 100% clean uninstall.</p>
+
+
+<h2>About This Module</h2>
+
+<p><b>qComment Module</b><br />
+This Module is created by C97.net. You can contact author at: <a href="mailto:contact@c97.net">contact@c97.net</a>,
+or visit the website in: <a href="www.c97.net">www.c97.net</a><br />
+© C97.net. All rights reserved.</p>
+<p>[ <a href="#top">back to top</a> ]</p>

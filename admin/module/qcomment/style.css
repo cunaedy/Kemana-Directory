@@ -1,0 +1,39 @@
+/* --( Comment )-- */
+.comment_box
+{ width:600px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding-bottom: 10px;
+  border-bottom: dotted 1px #aaa }
+  
+.comment_box_left
+{ width:100px;
+  float:left;
+  text-align:center }
+
+.comment_box_right  
+ { width:490px;
+  float:right }
+
+.comment_title
+{ font: bold 11pt Arial, Helvetica;
+  letter-spacing: 1px;
+  background: url('images/rev.gif') 0 5px no-repeat;
+  padding-left: 20px }
+
+.comment_helpful
+{ font: italic 8pt Arial, Helvetica; padding-left:35px }
+
+.conc_box
+{ width:489px;
+  margin-bottom:5px;
+  margin-left:100px; }
+ 
+ .conc_left
+ { width:100px;
+   float:left;
+   text-align:center }
+
+.conc_right
+{ width:380px;
+  float:right }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<qmodule type="module" version="1.0.0">
+ <name>Box</name>
+ <id>box</id>
+ <author>C97.net</author>
+ <copyright>C97.net. All rights reserved.</copyright>
+ <license>Commercial</license>
+ <authorEmail>contact@c97.net</authorEmail>
+ <authorUrl>www.c97.net</authorUrl>
+ <version>1.0.0</version>
+ <description>Display anything your write in module configuration on screen. Best used with module manager.</description>
+ <install>
+  <query></query>
+ </install>
+ <uninstall>
+  <query></query>
+ </uninstall>
+</qmodule>

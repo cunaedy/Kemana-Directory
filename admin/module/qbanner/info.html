@@ -1,0 +1,53 @@
+<a name="top"></a>
+<h1>Documentation of qBanner</h1>
+
+<h2>Introduction</h2>
+<p>Use this module to upload &amp; display simple banners. By 'simple'
+means no 3rd party administration, no time limit, no click tracking, no
+stats, nothing! Just upload &amp; display!</p>
+
+<h2>Installing</h2>
+<p>To install this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Click on Scan New Module.</li>
+ <li>On 'Available Modules', click 'Documentation' to read this manual.</li>
+ <li>Click on 'Install' to begin install process.</li>
+</ol>
+<p>You may also need to change your template, see Usage section.</p>
+
+<h2>Usage</h2>
+<ul>
+  <li>Open a skin file, preferred outline.tpl, eg. skins/default/outline.tpl</li>
+  <li>At the bottom of the page, add:</li>
+  <li><div class="code"><b>Code:</b><br />
+      &lt;!-- BEGINMODULE qbanner --&gt;&lt;!-- ENDMODULE --&gt;</div>
+	  This will display any banner (random) from any banner type.</li>
+  <li>You can also specify which banner type to display, use:<br />
+      <div class="code">
+	  &lt;!-- BEGINMODULE qbanner --&gt;<br />
+	  banner_type=X<br />
+	  &lt;!-- ENDMODULE --&gt;</div>
+	  Where <i>X</i> is banner type (A to E)</li>
+  <li>The fun part is, even if you specify a same banner_type for two locations, you won't see same ad on
+      both places.</li>
+</ul>
+
+<h2>Modification</h2>
+<p>To modify the formatting, see /skins/default/module_qbanner.tpl</p>
+
+<h2>Uninstalling</h2>
+<p>To uninstall this Module in, follow these easy steps:</p>
+<ol>
+ <li>Go to Admin CP &gt; Configure Site &gt; Modules.</li>
+ <li>Find qBanner. Click Uninstall.</li>
+ <li>You can choose to also remove database &amp; files.</li>
+</ol>
+<p>Uninstalling may require you to manually remove some files for 100% clean uninstall.</p>
+
+<h2>About This Module</h2>
+
+<p><b>qBanner Module</b><br />
+This Module is created by C97.net. You can contact author at: <a href="mailto:contact@c97.net">contact@c97.net</a>,
+or visit the website in: <a href="www.c97.net">www.c97.net</a><br />
+© C97.net. All rights reserved.</p>

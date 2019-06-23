@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<qmodule type="module" version="1.0.0">
+	<name>Kemana 2 Core Module</name>
+	<id>ke_core</id>
+	<author>C97.net</author>
+	<type>general</type>
+	<copyright>C97.net. All rights reserved.</copyright>
+	<license>Commercial</license>
+	<authorEmail>contact@c97.net</authorEmail>
+	<authorUrl>www.c97.net</authorUrl>
+	<version>1.0.0</version>
+	<description>This is a multipurpose module for Kemana 2. This module contains support for item listings and custom fields.</description>
+	<include>
+		<css>module_ke_core.css</css>
+	</include>
+</qmodule>

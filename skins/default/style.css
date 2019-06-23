@@ -1,0 +1,140 @@
+/* OUTLINE */
+/* COLOR: #fff, #eee, #ddd, #ccc, #aaa, #999, #000, #282828*/
+/* BOOTSTRAP: #5cb85c, #337ab7, #5bc0de, #f0ad4e, #d9534f */
+h1,h2,h3,h4,h5{font-family:Oswald, Arial, Helvetica;color:#282828;}
+h1{font-size:36px;}
+h2{font-size:26px;color:#282828;}
+h3{font-size:20px;}
+body{background:#fff;margin:0}
+th {text-align:left}
+
+/* CONTENTS */
+#body_left{padding-right:20px; padding-bottom:90px;padding-top:20px;}
+#body_right{color:#666;line-height:150%;padding-bottom:90px;}
+#body_right ul li{color:#666;line-height:150%;}
+#body_right a{text-decoration:none;}
+#body_right a:hover{text-decoration:underline;}
+#body_right h3{margin:25px 0 10px 0;font-size:20px}
+#footer{background:#111;color:#eee;padding:20px 0}
+#footer h4{font:17px Oswald;color:#eee;}
+#footer_content li a,#footer_content li{color:#999}
+.pg_main_image{border:solid 5px #fff;outline:solid 1px #888;box-shadow: 0 0 5px #888888;background:#fff;margin:15px 20px 10px -20px;transform:rotate(-3deg);float:left}
+
+/* WELCOME */
+#welcome{padding-bottom:90px}
+#welcome form {padding:30px 0;text-align: center}
+#welcome input {width:700px;}
+
+/* DIR */
+.SearchDiv{display:none;margin-bottom:5px;}
+.dir_select {height:600px}
+.dir_select>a>img {height:300px}
+.dir_select .dir_desc{height:180px;overflow:auto;margin-bottom:10px}
+
+/* LISTING DETAILS */
+h1>small>button:empty{display:none;}
+h3.cf_div{padding:0;margin:0}
+
+/* LISTING LIST */
+.cat_list>div>div {padding:3px;height:58px;margin-bottom:15px;border:solid 1px #bbb;-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);}
+.cat_list>div>div i{font-size: 9px}
+.cat_list img {height:50px; width:55px; overflow:hidden; padding-right:5px;}
+.cat_list ul{list-style: none;margin:0;padding:0;}
+.cat_list ul li{margin:0;padding:0;display:inline;font-size:11px;}
+.cat_list ul li:after{content:', ';}
+.cat_list ul li:last-child:after{content:'';}
+#search_filter select{max-width:100%}
+#search_filter_main_form {margin-bottom: 20px}
+
+.list_item{margin-bottom:15px;padding:10px;border:solid 1px #bbb;-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);}
+.list_item.list_premium{background:#D9D690;}
+.list_item.list_sponsored{background:#D9D690;position:relative;border-color:#ADAB73;}
+.list_item .ribbon{display: none}
+.list_item a {text-decoration:none}
+.list_item a:hover{text-decoration:underline}
+
+.listbox_img{width:20%; float:left; margin-right:10px;border:solid 1px #ccc;padding:3px;background:#fff}
+.listbox_txt{width:75%; float:left; margin-right:10px}
+.listbox_txt a{font-size:18px;color:#000;font-weight:400}
+.listbox_txt small{font-size:10px;color:#555}
+
+.gridbox{height:435px;}
+.gridbox_img{height:240px;border:solid 1px #eee;padding:3px;overflow: hidden;background: #fff;margin-bottom: 10px}
+.gridbox_img div {height:238px;overflow: hidden}
+.gridbox_txt{margin-bottom:5px;height:170px;overflow: auto}
+.gridbox_txt a{font-size:18px;color:#000;font-weight:400}
+.gridbox_txt small{font-size:10px;color:#555}
+
+.list_sponsored .list_listbox_txt a{font-weight:700}
+.list_sponsored .ribbon{position:absolute;right:-5px;top:-5px;z-index:1;overflow:hidden;width:75px;height:75px;text-align:right;display: block}
+.list_sponsored .ribbon span{font-size:10px;font-weight:700;color:#FFF;text-transform:uppercase;text-align:center;line-height:20px;transform:rotate(45deg);-webkit-transform:rotate(45deg);width:100px;display:block;background:#F70505;position:absolute;top:19px;right:-21px}
+.list_sponsored .ribbon span::before{content:"";position:absolute;left:0;top:100%;z-index:-1;border-left:3px solid #8F0808;border-right:3px solid transparent;border-bottom:3px solid transparent;border-top:3px solid #8F0808}
+.list_sponsored .ribbon span::after{content:"";position:absolute;right:0;top:100%;z-index:-1;border-left:3px solid transparent;border-right:3px solid #8F0808;border-bottom:3px solid transparent;border-top:3px solid #8F0808}
+
+.cf_list{display: inline-block;margin:0 1px 1px 0;font-size:12px;font-weight: 400;text-overflow: ellipsis;max-width: 100%;overflow: hidden;}
+.cf_list a{color:#fff;font-size:12px}
+.edit-listing{font-size:10px !important;opacity: 0.5}
+.edit-listing:hover{opacity:1}
+
+
+/* Bootstrap XS */
+@media screen and (max-width: 767px) {
+body{margin:0}
+.pg_main_image{float:none;margin-left:10px}
+.list_search{display:none}
+.list_search_opt{display:none}
+.list_listbox_img{width:auto;float:none;margin:0}
+.list_listbox_txt{width:auto;float:none;margin:0}
+.list_listbox_price{width:auto;float:none; text-align:right}
+.list_gridbox {width:auto;float:none;height:auto;margin:10px auto;border:none}
+.list_gridbox_img{width:195px;height:160px;float:none;margin:auto;text-align:center}
+.list_gridbox_txt{width:auto;height:auto;float:none;margin:auto;text-align:center}
+.list_gridbox .feat_price,.list_gridbox .discount{text-align:center !important;float:none !important}
+.list_catlist {width:auto;float:none;margin-right:0}
+.list_catlist_r {width:auto;float:left;padding-top:20px;padding-left:20px}
+.detail_left{width:auto;float:none}
+.detail_left div,.detail_left div:first-child{width:auto;min-width:auto;max-width:auto;float:left;margin:0 5px 5px 0;text-align:left}
+.detail_right{width:auto;float:none}
+.detail_bar h2 {cursor:pointer;background:#ddd;border-bottom:solid 1px #888}
+.detail_bar>div>div{display:none}
+.gridbox{height:auto;max-width:250px;margin:0 auto 10px auto;}
+.gridbox_img{height:228px}
+.gridbox_img div {height:224px}
+.listbox_img{width:20%}
+.listbox_txt{width:55%}
+.listbox_side{width:20%}
+#welcome input {width:100%;}
+}
+
+@media screen and (max-width: 480px){
+.listbox_img{width:20%}
+.listbox_txt{width:70%}
+.listbox_side{display:none;}
+}
+
+/* Bootstrap SM */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.list_gridbox {width:216px}
+.list_listbox_txt{width:400px;}
+.list_catlist {width:216px}
+.list_catlist_r {width:120px}
+.gridbox{height:415px;}
+.gridbox_img{height:196px}
+.gridbox_img div {height:194px}
+.gridbox_txt{height:190px}
+#welcome input {width:100%;}
+}
+
+/* Bootstrap MD */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+.list_gridbox {width:212px;}
+.list_listbox_txt{width:400px;}
+.list_catlist {width:212px}
+.list_catlist_r {width:120px}
+.gridbox{height:400px;}
+.gridbox_img{height:190px}
+.gridbox_img div {height:188px}
+.gridbox_txt{height:185px}
+}
+
+/* Bootstrap LG is the default css */

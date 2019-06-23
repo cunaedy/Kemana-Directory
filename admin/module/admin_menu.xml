@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<qmodule type="module" version="1.0.0">
+ <description>This file contains admin menu for modules. And should be rebuilt at: install/uninstall</description>
+ 
+ <adminGroup>
+ <title>Box</title>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>Page Gallery</title>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>qBanner</title>
+ 
+ <adminMenu>
+  <adminTitle>Manage Banner</adminTitle>
+  <adminUrl>task.php?mod=qbanner&amp;run=edit.php</adminUrl>
+ </adminMenu>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>qComment</title>
+ 
+ <adminMenu>
+  <adminTitle>Manage Comments</adminTitle>
+  <adminUrl>task.php?mod=qcomment&amp;run=edit.php</adminUrl>
+ </adminMenu>
+ 
+ <adminMenu>
+  <adminTitle>Comment Rules</adminTitle>
+  <adminUrl>task.php?mod=qcomment&amp;run=rule.php</adminUrl>
+ </adminMenu>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>qMenu</title>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>Simple Stats</title>
+ 
+ <adminMenu>
+  <adminTitle>Site Statistics</adminTitle>
+  <adminUrl>task.php?mod=qstats&amp;run=stats.php</adminUrl>
+ </adminMenu>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>Slideshow</title>
+ 
+ <adminMenu>
+  <adminTitle>Manage Slides</adminTitle>
+  <adminUrl>task.php?mod=slideshow&amp;run=edit.php</adminUrl>
+ </adminMenu>
+ 
+ </adminGroup>
+ 
+ <adminGroup>
+ <title>Ztopwatch</title>
+ 
+ </adminGroup>
+ 
+</qmodule>

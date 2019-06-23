@@ -1,0 +1,106 @@
+/* BASIC */
+h1, h2, h3, h4{color:#555}
+body{background:url('images/bg.png') 0 0 #eee}
+.small{font-size:10px;}
+.msgtitle{font:bold 18px Arial;color:#6C3;}
+.msgtitle2{font:bold 18px Arial;color:#900;}
+.liveclock_hour{font-size:40px;text-align:center;color:#fff;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);}
+.liveclock_date{text-align:center;color:#fff}
+.panel-heading{font-size:18px;color:#444 !important}
+#container{max-width:1170px; margin:auto; -webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.5);-moz-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.5);box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.5); background:#fff;padding-bottom:30px;margin-bottom:30px}
+#wrapper{padding-left:200px;-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);background:url(images/wrapper.png) 0 0 repeat-y}
+#nav-bar{padding:30px 0;width:200px;margin-left:-200px;float:left}
+#top-bar{background:#eee;border-bottom:solid 1px #ddd;padding:15px 30px; text-align:right;color:#666;}
+#clockIcon{text-align:right;padding:0 30px;margin-top:-40px;margin-bottom:50px}
+#notification-center{vertical-align:top;font-size:10px;margin-left:-4px;margin-top:-5px;position:relative;z-index:1}
+#popup-notify{cursor:pointer;padding:18px;margin:-18px -10px -18px 0}
+#popup-notify:hover{background:#ccc}
+#content{background:#fff;float:left;width:100%}
+#menuButton{position:fixed;top:10px;background:#2F4050;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-right-radius: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomright: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+#toggleMenu{padding:8px 8px 8px 5px;color:#fff;font-size:12px;cursor:pointer}
+input[type=text],input[type=password]{width:90%;max-width:90%;min-width:90%}
+.manage_highlight{background:#f99;border-radius:3px;padding:3px}
+.narrow_input,.width-sm{min-width:100px !important;max-width:200px !important}
+.width-xs{min-width:100px !important;max-width:100px !important}
+.width-md{min-width:100px !important;max-width:350px !important}
+.width-l{min-width:100px !important;max-width:500px !important}
+.width-xl{min-width:100px !important;max-width:700px !important}
+
+/* ACCORDION */
+#accordion{margin:0; padding:0;}
+#accordion li{line-height:1;font-size:13px}
+#accordion a{display: block;text-decoration: none;padding: 15px 20px !important;color:#A7B1C2;font-weight:700}
+#accordion .has-children>a:before{font-family: "Glyphicons Halflings";font-weight:400;content: "\e259";float:right;font-size:8px;vertical-align:middle;}
+#accordion>li>a:hover{background: #428BCA;color: #fff;}
+#accordion a:hover{color: #fff;}
+#accordion .has-children.closed a{}
+#accordion .has-children.closed>a:before{font-family: "Glyphicons Halflings";content: "\e257";float:right;font-size:8px;vertical-align:middle;}
+#accordion .has-children {}
+#accordion .has-children ul{padding-left:10px}
+#accordion>li.has-children>ul{padding-left:17px;background:#273846;-webkit-box-shadow: inset 0px 4px 9px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 4px 9px -6px rgba(0,0,0,0.75);
+box-shadow: inset 0px 4px 9px -6px rgba(0,0,0,0.75);}
+#accordion ul, #accordion li{margin:0; padding: 0}
+#accordion li a{margin:0}
+
+/* ADMIN TABLE */
+.table-form tr>td:first-child{font-weight:400;color:#333;vertical-align:middle}
+.table-form tr>td:first-child .glyphicon{color:#ccc;margin-right:5px}
+td.adminbg_c{color:#000 !important;text-align:center;padding:8px;border-bottom:solid 1px #ccc !important;border-top:solid 1px #ccc !important;background:#fafafa}
+td.adminbg_h{background:#bbb;color:#000 !important;text-align:left;font-weight:700 !important}
+.admin_tbl,.admin_tbl td,.admin_tbl th{border:none !important}
+
+/* FILE MANAGER */
+.fman_tree{font:14px;text-decoration:none;}
+.fman_tree:hover{text-decoration:underline;}
+#fman_tool{border:solid 2px #369;width:99%;background:#FFF;padding:2px;}
+.fman_tool_content{background:#EEE;text-align:center;margin-top:1px;padding:5px 0;}
+.fman_tool_head{background:#369;color:#FFF;font-weight:700;text-align:center;padding:3px;}
+.imagelib_wrapper{display: flex;align-items: center;flex-wrap:wrap;padding:14px;}
+.imagelib_item{border:solid 1px #eee;margin-left:-1px;margin-top:-1px;padding:5px;}
+.imagelib_div{text-align: center;position: relative;margin:auto;height:150px;overflow:hidden;}
+.imagelib_info{position: absolute;top:0;right:0;background:rgba(0,0,0,0.6);color:#fff;opacity: 0; transition:all 0.5s}
+.imagelib_div:hover .imagelib_info{opacity:1; transition:all 0.5s}
+
+/* QUICK STATUS */
+ul.quick_info{list-style:none;margin:0;padding:0}
+ul.quick_info li{display:inline;border:solid 1px #bbb;padding:5px 15px;background:#e3e3e3;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;line-height:2}
+ul.quick_info li:hover{background:#f3f3f3}
+ul.quick_info li a{text-decoration:none}
+ul.quick_info li button{background:none;border:none;color:#428bca}
+
+/* CONTENTS */
+.rssFeed ul{list-style:none;margin:0;padding:0}
+.rssFeed ul li{margin:0 0 10px 0;padding:0}
+.rssFeed ul li>h4,.rssFeed ul li p{margin:0;padding:0}
+.rssFeed ul li div{font-size:10px;color:#999}
+.summary_l{width:49%; float:left}
+.summary_r{width:49%; float:right}
+.module_setup{margin-top:10px;text-decoration:none;color:#000;font-size:10px;}
+.module_setup:hover{color:#00f;}
+.warning{border:solid 1px #f00;background:#ff8;text-align:center;padding:20px;font-size:17px}
+.warning_small {border:solid 1px #f00;background:#ff8;padding:2px;margin:2px 0}
+.tinynav{display:none}
+
+/* Bootstrap XS */
+@media screen and (max-width: 767px) {
+.summary_l,.summary_r{width:auto;height:auto;float:none;}
+.tinynav{display:block;position:absolute;top:7px;left:45px;width:auto;}
+#accordion {display:none}
+#wrapper{padding:0}
+#menuButton{display:none}
+#content{overflow:auto}
+select.tinynav{padding:5px;border:none;outline:none}
+.width-xs, .width-sm, .width-md, .width-l, .width-xl{width:90% !important; min-width:90% !important; max-width:90% !important}
+}
+
+
+/* Bootstrap SM */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Bootstrap MD */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Bootstrap LG is the default css */
