@@ -6,6 +6,16 @@ Kemana Directory is a free & open source link (and multipurpose) directory. You 
 
 You can also make money by offering Premium & Sponsored listings!
 
+## More Information
+
+Learn more about Kemana Directory: https://www.c97.net/kemana-the-ultimate-php-directory-script.php
+
+Or try the live demo here: https://www.c97.net/kemana-demonstration.php
+
+If you feel the script is useful, consider purchasing the commercial license: https://www.c97.net/buy-now.php
+
+_You can still use the script for free, but I will be very grateful if you purchase the license. Also you will receive personal support from me._
+
 ## Installing
 
 1. Simply download the zip file.
