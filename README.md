@@ -6,6 +6,8 @@ Kemana Directory is a free & open source link (and multipurpose) directory. You 
 
 You can also make money by offering Premium & Sponsored listings!
 
+![Kemana Hero](https://www.c97.net/public/image/kemana-hero.jpg)
+
 ## More Information
 
 Learn more about Kemana Directory: https://www.c97.net/kemana-the-ultimate-php-directory-script.php
