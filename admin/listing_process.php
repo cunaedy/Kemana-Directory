@@ -186,7 +186,6 @@ $item_url_mask = post_param('item_url_mask');
 $item_summary = post_param('item_summary');
 $item_details = post_param('item_details');
 $item_status = post_param('item_status');
-// $item_sort_point = post_param('item_sort_point'); // remove this unused
 $item_class = post_param('item_class');
 $item_date = date_param('item_date', 'post');
 $item_valid_date = date_param('item_valid_date', 'post');
@@ -235,13 +234,6 @@ if (!empty($item_backlink_url)) {
 }
 
 // create sql
-/* update these lines:
-$sql = "dir_id = '$dir_id', owner_id = '$owner_id', owner_email = '$owner_email', $sql_cat_str, item_url='$item_url', item_url_mask='$item_url_mask',
-item_permalink = '$item_permalink', item_title = '$item_title', item_summary = '$item_summary', item_details = '$item_details', item_status = '$item_status', item_sort_point = '$item_sort_point', item_class = '$item_class',
-item_date = '$item_date', item_update='$sql_today', item_valid_date = '$item_valid_date', item_backlink_url = '$item_backlink_url', item_backlink_ok='$item_backlink_ok', item_visibility = '$item_visibility', item_keyword = '$item_keyword', see_also = '$see_also', orphaned='0'";
-*/
-
-// to this
 $sql = "dir_id = '$dir_id', owner_id = '$owner_id', owner_email = '$owner_email', $sql_cat_str, item_url='$item_url', item_url_mask='$item_url_mask',
 item_permalink = '$item_permalink', item_title = '$item_title', item_summary = '$item_summary', item_details = '$item_details', item_status = '$item_status', item_class = '$item_class',
 item_date = '$item_date', item_update='$sql_today', item_valid_date = '$item_valid_date', item_backlink_url = '$item_backlink_url', item_backlink_ok='$item_backlink_ok', item_visibility = '$item_visibility', item_keyword = '$item_keyword', see_also = '$see_also', orphaned='0'";
