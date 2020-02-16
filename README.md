@@ -41,3 +41,7 @@ _You can still use the script for free, but I will be very grateful if you purch
 ## Let's Get Started!
 
 For installation guide, running for the first time, please visit https://github.com/cunaedy/Kemana-Directory/wiki/10.-Getting-Started
+
+## Add Ons
+
+For list of available add ons, please visit https://github.com/cunaedy/Kemana-Directory/wiki/80.-Add-Ons
