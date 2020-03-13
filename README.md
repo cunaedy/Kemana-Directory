@@ -34,6 +34,8 @@ Learn more about Kemana Directory: https://www.c97.net/kemana-the-ultimate-php-d
 
 Or try the live demo here: https://www.c97.net/kemana-demonstration.php
 
+Change log: https://github.com/cunaedy/Kemana-Directory/wiki/99.-Changes-Logs
+
 If you feel the script is useful, consider purchasing the commercial license: https://www.c97.net/buy-now.php
 
 _You can still use the script for free, but I will be very grateful if you purchase the license. Also you will receive personal support from me._
